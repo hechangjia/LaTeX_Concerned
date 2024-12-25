@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{这是第一部分}{3}{0}{1}
+\beamer@sectionintoc {2}{这是第二部分}{4}{0}{2}
+\beamer@sectionintoc {3}{这是第三部分}{5}{0}{3}
+\beamer@sectionintoc {4}{这是第四部分}{6}{0}{4}
+\beamer@sectionintoc {5}{这是第五部分}{7}{0}{5}
