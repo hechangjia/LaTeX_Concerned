@@ -1,50 +1,36 @@
-
-
-
 \documentclass{beamer}
-
 \usepackage[UTF8,noindent]{ctexcap}
-\usetheme{Berlin}
-\usecolortheme{crane}
-
+\usepackage{tikz}
 \usepackage{graphicx}
-
+\usetheme{Berlin}
+%\usecolortheme{crane}
 \institute[NJUPT]{南京邮电大学}
 \author[Robert$\cdot$Charlie]{贺昌嘉}
 \title[Beamer模板]{这是文档的大标题}
 \date{\today}
 \subtitle{这是文档的小标题}
 \subject{模板}
-
-
-\titlegraphic{\includegraphics[width=0.434\textwidth]{beamer图片1.pdf}}
-%\titlegraphic{\includegraphics[width=0.5\textwidth]{image.pdf}}
-
-% 自定义 logo 的位置
-% 在左上角添加校徽
+% 设置背景图位置 这里的xshift和yshift可以调节相对位置
 \setbeamertemplate{logo}{%
-	\raisebox{4.65cm}{% 向上抬高，以便校徽在左上方
-		\hspace*{-8\paperwidth}% 往左移动位置，可自行调节
-		\includegraphics[height=1.56cm]{NJUPT.png}%
-	}
+	\begin{tikzpicture}[overlay, remember picture]
+		\node[xshift=15em,yshift=-13em] at (current page.north west) {\includegraphics[height=.1\paperheight]{校徽.jpg}};
+	\end{tikzpicture}
 }
-
-	
-
-
 \begin{document}
-\maketitle
-
-
-\begin{frame}{目录}
-	
-	\tableofcontents
-\end{frame}
-
-\section{这是第一部分}
-\begin{frame}{第一节标题}{第一节小标题}
-	内容...
-\end{frame}
+	\maketitle
+	\setbeamertemplate{logo}{} %重置logo效果
+	\setbeamertemplate{background}{
+		\begin{tikzpicture}[overlay, remember picture]
+			\node[xshift=-7em,yshift=-1em,opacity=.3] at (current page.east) {\includegraphics[height=.7\paperheight]{NJUPT.png}};
+		\end{tikzpicture}
+	}
+	\begin{frame}{目录}
+		\tableofcontents
+	\end{frame}
+	\section{这是第一部分}
+	\begin{frame}{第一节标题}{第一节小标题}
+		内容...
+	\end{frame}
 
 \section{这是第二部分}
 \begin{frame}
