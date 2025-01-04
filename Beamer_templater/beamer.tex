@@ -1,3 +1,7 @@
+
+
+
+
 \documentclass{beamer}
 \usepackage[UTF8,noindent]{ctexcap}
 \usepackage{tikz}
@@ -12,9 +16,11 @@
 \subject{模板}
 % 设置背景图位置 这里的xshift和yshift可以调节相对位置
 %\titlegraphic{\includegraphics[width=0.5\textwidth]{beamer图片1.png}}
+
 \setbeamertemplate{logo}{%
 	\begin{tikzpicture}[overlay, remember picture]
 		\node[xshift=15em,yshift=-13em] at (current page.north west) {\includegraphics[height=.1\paperheight]{校徽.jpg}};
+		\node[xshift=-20.86em,yshift=-9.5em,opacity=.3] at (current page.east) {\includegraphics[scale=0.5]{NJUPT.png}};
 	\end{tikzpicture}
 }
 \begin{document}
@@ -22,9 +28,10 @@
 	\setbeamertemplate{logo}{} %重置logo效果
 	\setbeamertemplate{background}{
 		\begin{tikzpicture}[overlay, remember picture]
-			\node[xshift=-7em,yshift=-1em,opacity=.3] at (current page.east) {\includegraphics[height=.7\paperheight]{NJUPT.png}};
+			\node[xshift=-8.13em,yshift=-1.8em,opacity=.3] at (current page.east) {\includegraphics[height=.7\paperheight]{NJUPT.png}};
 		\end{tikzpicture}
 	}
+	
 	\begin{frame}{目录}
 		\tableofcontents
 	\end{frame}
@@ -32,7 +39,7 @@
 	\begin{frame}{第一节标题}{第一节小标题}
 		内容...
 	\end{frame}
-\today
+	
 \section{这是第二部分}
 \begin{frame}
 	\frametitle{这是第二节标题}
